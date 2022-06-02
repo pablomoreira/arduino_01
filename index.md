@@ -41,7 +41,7 @@ También es una excelente plataforma para)
 
 ## Clase 4 (Actuadores)
 - Relés mecánicos NO/NC
-- Circuitos con baja tensión (Lamparas)
+- Circuitos de baja tensión con reles (Lamparas)
 - Medición de temperatura digital
 
 ## Clase 5
