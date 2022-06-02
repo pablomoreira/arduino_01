@@ -2,7 +2,7 @@
 
 ### Descripción del curso
 
-[.]: <> (Arduino es una plataforma ideal como curso introductorio a la programación de
+<!--Arduino es una plataforma ideal como curso introductorio a la programación de
 microcontroladores. La simpleza, la variedad de ejemplos y la documentación hace
 de esta la herramienta ideal para curso inicial programación.
 
@@ -12,6 +12,7 @@ experimentales visibles, tales como activar un LED, hacer girar un motor,
 atender eventos y utilizar sensores diversos.
 
 También es una excelente plataforma para)
+-->
 
 ## Clase 1 (IDE)
 - Introducción a la plataforma al IDE y otras alternativas
