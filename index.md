@@ -26,13 +26,13 @@ También es una excelente plataforma para)
 
 ## Clase 2 (Entradas Analógicas/Digitales)
 - Entradas Analógicas
-- Lectura de sensor Analogicos
+- Lectura de sensor Analógicos
 - Circuito con potenciómetros
 - Circuito para una LDR
-- Circuitos con Pulsadores
+- Entradas Digitales
 - Teclados matriciales
 
-## Clase 3
+## Clase 3 (Comunicaciones)
 - Puerto serie
 - Lectura y Estructura del puerto serie.
 - Display  LCD (2x16)
@@ -44,5 +44,5 @@ También es una excelente plataforma para)
 - Circuitos de baja tensión con reles (Lamparas)
 - Medición de temperatura digital
 
-## Clase 5
+## Clase 5 (Práctica)
 - Trabajo Final integrador
