@@ -17,7 +17,7 @@ También es una excelente plataforma para)
 ## Clase 1 (IDE)
 - Introducción a la plataforma al IDE y otras alternativas
 - Estructura general de un programa
-- Hola Mundo (Blink)
+- Como funciona un programa básico. Hola Mundo (Blink)
 - Variables y primitivas
 - Estructuras de control
 - Estructuras repetitivas
