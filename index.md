@@ -3,7 +3,7 @@
 ### Introducción    
 
 Arduino es una plataforma ideal como curso introductorio a la programación de
-microcontroladores. La simpleza, variedad de ejemplos y la documentación hacen
+microcontroladores.     La simpleza, variedad de ejemplos y la documentación hacen
 de esta, la herramienta ideal para adquirir conocimientos iniciales en programación.
 <!--
 La posibilidad de experimentar diferentes conceptos abstractos de programación,
