@@ -9,7 +9,7 @@ size:4:3
 -->
 
 # **ARDUINO**
-![bg right](https://freesvg.org/img/Arduino-Fixed.png)
+![bg right width:95% height:95%](img/Arduino.png)
 - # Introducción
 - # IDE [Descarga](https://www.arduino.cc/en/software).
 - # IDE [Alternativo](https://platformio.org/)
@@ -17,3 +17,6 @@ size:4:3
 ---
 
 
+
+# **ARDUINO IDE**
+![bg right width:95% height:95%](img/ide1.png)
