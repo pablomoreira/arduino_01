@@ -6,6 +6,7 @@ marp: true
 theme: default
 paginate: true
 size:4:3
+paginate: true
 -->
 
 <style>
