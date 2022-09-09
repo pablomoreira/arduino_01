@@ -16,11 +16,11 @@ También es una excelente plataforma para)
 
 ## Clase 1 (IDE)
 - Introducción a la plataforma al IDE y otras alternativas
+- Estructuras de control
+- Estructuras repetitivas
 - Estructura general de un programa
 - Como funciona un programa básico. Hola Mundo (Blink)
 - Variables y primitivas
-- Estructuras de control
-- Estructuras repetitivas
 - Pines Digitales
 - Funciones pinMode, digitalWrite, delay
 
@@ -34,7 +34,7 @@ También es una excelente plataforma para)
 
 ## Clase 3 (Comunicaciones)
 - Puerto serie
-- Lectura y Estructura del puerto serie.
+- Lectura y Escritura del puerto serie.
 - Display  LCD (2x16)
 - Practica LCD LDR
 - Practica Teclados LCD

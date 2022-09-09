@@ -1,11 +1,13 @@
 ---
 marp: true
+---
+<!--
 author: "Pablo Moreira"
 theme: default
 paginate: true
 size: 16:9
-footer: [Link] (https://github.com/pablomoreira/arduino_01/blob/main/)clase01.md
----
+footer: "[Link](https://github.com/pablomoreira/arduino_01/blob/main/clase01.md)"
+-->
 
 <style>
 r { color: Red }
@@ -18,6 +20,17 @@ g { color: Green }
 - # Introducción
 - # IDE [Descarga](https://www.arduino.cc/en/software)
 - # IDE [Alternativo](https://platformio.org/)
+
+<!-- Que es Arduino Placas Bibliotecas IDE Libre 
+    ¿Quien sabe programar o usado lenguajes de programación?
+    ¿Conocen las estructuras básica de un lenguaje estructurado?
+    Que es C y porque se utiliza para programar micros
+    Como funciona una cpu
+    Diferencias entre un Procesador y un micro
+    Multi procesos 
+    Multi tareas 
+
+ -->
 
 ---
 
@@ -44,7 +57,17 @@ void loop() {
   
 }
 ```
+
 ---
+[![IMAGE_ALT](https://hackaday.com/wp-content/uploads/2016/07/turing-machine-ivpv_kayuwkmp4-shot0005_featured.png?w=800)](https://www.youtube.com/embed/ivPv_kaYuwk)
+
+---
+
+![bg](https://images.newscientist.com/wp-content/uploads/2016/06/29180000/crmt0d.jpg)
+
+
+---
+
 # **Variables Numéricas**
 - ## <r>byte</r>  A byte stores an 8-bit unsigned number, from 0 to 255
 - ## <r>char</r> A data type used to store a character value. Character literals are written in single quotes, like this: 'A'
@@ -115,7 +138,7 @@ byte var = 0;
 void setup() {
   pinMode(LED, OUTPUT);
 }
-
+//Activar el led 10 veces
 void loop() {
   if (var < 10){
     digitalWrite(LED, HIGH);   
@@ -136,7 +159,7 @@ byte var = 0;
 void setup() {
   pinMode(LED, OUTPUT);
 }
-
+//Luego de Activar 10 veces cambiar la velocidad del blink
 void loop() {
   if (var < 10){
     digitalWrite(LED, HIGH);   
@@ -154,7 +177,7 @@ void loop() {
 ```
 
 ---
-# **Estructuras repetivas <g>FOR y WHILE</g>**
+# **Estructuras repetitivas <g>FOR y WHILE</g>**
 
 ```cpp
 byte LED = 13;
@@ -193,4 +216,75 @@ void loop() {
   }
   delay(5000);      
 }
+```
+---
+# Problema 1
+Conectar otro led a una salida digital y alternar los estados, cuando uno esté Activado (1 o HIGH) el otro debe estar LOW o 0.
 
+---
+
+Solución (Posible)1
+
+```cpp
+byte LED1 = 13;
+byte LED2 = 12;
+void setup() {
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, LOW);
+}
+
+void loop() {
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, LOW);
+  delay(1000);
+  digitalWrite(LED2, HIGH);
+  digitalWrite(LED1, LOW);
+  delay(1000);
+}
+```
+
+---
+Solución (Posible)2
+```cpp
+byte LED1 = 13;
+byte LED2 = 12;
+bool estado1 = HIGH;
+bool estado2 = LOW;
+
+void setup() {
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  digitalWrite(LED1, HIGH);
+  digitalWrite(LED2, LOW);
+}
+
+void loop() { 
+   digitalWrite(LED1,!estado1);
+   estado1 = !estado1;
+   digitalWrite(LED2,!estado2);
+   estado2 = !estado2;
+   delay(1000);
+}
+```
+
+---
+Solucion (Posible3)
+```cpp
+byte LED1 = 13;
+byte LED2 = 12;
+bool estado = HIGH;
+
+void setup() {
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+}
+
+void loop() { 
+   digitalWrite(LED1,!estado);
+   digitalWrite(LED2,estado);
+   estado = !estado;
+   delay(1000);
+}
+```
