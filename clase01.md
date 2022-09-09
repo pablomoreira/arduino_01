@@ -1,13 +1,11 @@
 ---
 marp: true
----
-
-<!--
+author: "Pablo Moreira"
 theme: default
 paginate: true
-size:4:3
-paginate: true
--->
+size: 16:9
+footer: [Link] (https://github.com/pablomoreira/arduino_01/blob/main/)clase01.md
+---
 
 <style>
 r { color: Red }
@@ -30,7 +28,7 @@ g { color: Green }
 
 # **ARDUINO IDE ALTERNATIVO**
 
-![bg right width:95% height:90%](img/codium.png)
+![bg right width:100% height:85%](img/codium.png)
 
 ---
 # **CÓDIGO**
@@ -58,10 +56,10 @@ void loop() {
 - ## <r>long</r> Long variables are extended size variables for number storage, and store 32 bits (4 bytes), from -2,147,483,648 to 2,147,483,647.
 - ## <r>short</r> A short is a 16-bit data-type. On all Arduinos (ATMega and ARM based) a short stores a 16-bit (2-byte) value. This yields a range of -32,768 to 32,767 (minimum value of -2^15 and a maximum value of (2^15) - 1).
 ---
-# **Funciónes**
-Porcion de código que realiza un proceso independiete del programa principal
+# **Funciones**
+Porción de código que realiza un proceso independiente del programa principal
 
-Su pricipal objetivo es fragmentar el codigo con la idea de que un problema puede dividirce en sub probleas mas simples.
+Su principal objetivo es fragmentar el código con la idea de que un problema puede dividirse en sub problemas mas simples.
 
 ```cpp
 void func1(){
@@ -72,7 +70,7 @@ int func2(){
 }
 ```
 ---
-# En resumen se puede enteder una funcion como una caja negra con flujo de datos de entrada y salida.
+# En resumen se puede entender una función como una caja negra con flujo de datos de entrada y salida.
 
 ---
 
