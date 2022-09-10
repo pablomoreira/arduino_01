@@ -206,7 +206,7 @@ void setup() {
 }
 
 void loop() {
-  int = 0;
+  int i = 0;
   while(i < 10){
     digitalWrite(LED, HIGH);   
     delay(250);
