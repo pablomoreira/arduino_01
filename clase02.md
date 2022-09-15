@@ -7,6 +7,8 @@ theme: default
 paginate: true
 size: 16:9
 footer: "[Link](https://github.com/pablomoreira/arduino_01/blob/main/clase01.md)"
+
+
 -->
 
 <style>
@@ -42,9 +44,42 @@ g { color: Green }
 ![bg right width:85% height:90%](https://i0.wp.com/blog.330ohms.com/wp-content/uploads/2020/06/Arduino_lm35_bb.png?resize=696%2C860&ssl=1)
 
 - Los Sensores digitales tienen salidas que se pueden conectar a microprocesadores (Arduino)
-u
+
 - La analogía se hace con valores de voltage.
 
-- Por ejemplo 1 V equivale a 10 <span>&deg;</span> Centígrados
+- Por ejemplo:  
+    - 1 Volt  equivale a 10 <span>&deg;</span> Centígrados
 
 ---
+
+#  **Potenciómetro como entrada analógica**
+
+![bg right ](img/arduino_pote.png)
+
+Convierte valores analógicos a digitales de 10-bit
+
+| int    | Volts    |
+|--------|----------|
+| 0     | 0.0 - 0.0049|
+| 1     | 0.0049 - 0.0098|
+
+
+
+---
+
+
+
+---
+
+
+```cpp
+
+void setup() {
+  Serial.begin(9600);
+}
+
+void loop() {
+  analogRead(); 
+  Serial.println(analogRead(A1)); 
+}
+```
