@@ -61,7 +61,8 @@ Convierte valores analógicos a digitales de 10-bit
 
 
 ---
-<div align="center">
+
+![bg w:90% right](img/analog-digital.png)
 | int    | Volts    |
 |:-:|:-:|
 |0  | 0.0000 - 0.0049|
@@ -71,9 +72,9 @@ Convierte valores analógicos a digitales de 10-bit
 |1022  | 4.9902 - 4.9951|
 |1023  | 4.9951 - 5.0000|
 
-</div>
 
 ---
+## **Ejercicio Práctico 1.0**
 
 
 ```cpp
@@ -82,6 +83,32 @@ void setup() {
 }
 
 void loop() {
-  Serial.println(analogRead(A1)); 
+  Serial.println(analogRead(A0)); 
 }
 ```
+
+---
+# **Ejercicio Práctico 1.1**
+
+```cpp
+void setup() {
+  Serial.begin(9600); //
+}
+void loop() {
+  uint16_t analog0;
+  analog0 = analogRead(A0);
+  Serial.println(analog0); 
+  delay(1000);
+}
+```
+---
+
+# Fotorresistor
+![bg w:100% right](img/LDR1.png)
+- componente electrónico cuya resistencia se modifica, con el aumento de intensidad de luz incidente.
+- LDR (light-dependent resistor) 
+---
+# **Problema 1**
+
+> Armar un circuito que simule o imite el funcionamiento de una lampara de iluminación callejera.
+> - Cuando el sensor o LDR detecte falta de luz se active un led. 
