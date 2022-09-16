@@ -39,7 +39,7 @@ g { color: Green }
 
 ---
 
-# **Sensores Analógicos**
+# **Entradas Analógicos**
 
 ![bg right width:85% height:90%](https://i0.wp.com/blog.330ohms.com/wp-content/uploads/2020/06/Arduino_lm35_bb.png?resize=696%2C860&ssl=1)
 
@@ -74,7 +74,7 @@ Convierte valores analógicos a digitales de 10-bit
 
 
 ---
-## **Ejercicio Práctico 1.0**
+# **Ejercicio Práctico 1.0**
 
 
 ```cpp
@@ -112,3 +112,52 @@ void loop() {
 
 > Armar un circuito que simule o imite el funcionamiento de una lampara de iluminación callejera.
 > - Cuando el sensor o LDR detecte falta de luz se active un led. 
+
+---
+
+# **Entradas Digitales**
+
+![bg right h:92%](img/io_digital_levels.png)
+
+> Estados *Altos* y *bajos*
+> Lógicos *Verdadero* o *Falso*
+> Binario *0* o *1*
+
+La idea es tener dos estados bien diferenciados  
+
+---
+# **Circuito eléctricos**
+![bg right w:100%](img/pullup_pulldown.png)
+
+---
+![bg w:90%](img/arduino-pulsador.png)
+
+---
+```cpp
+const int inputPin = 2;
+
+int value = 0;
+ 
+void setup() {
+  Serial.begin(9600);
+  pinMode(inputPin, INPUT);
+}
+ 
+void loop(){
+  value = digitalRead(inputPin);  //lectura digital de pin
+ 
+  //mandar mensaje a puerto serie en función del valor leido
+  if (value == HIGH) {
+      Serial.println("Encendido");
+  }
+  else {
+      Serial.println("Apagado");
+  }
+  delay(1000);
+}
+
+```
+---
+## Problema 2
+> Armar un circuito que simule o imite el funcionamiento de una lampara de iluminación callejera.
+> - Cuando el sensor o LDR detecte falta de luz se active un led pero que al activar o presionar un pulsador se mantenga el estado actual sin importar la luz que reciba la LDR.
