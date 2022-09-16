@@ -58,28 +58,30 @@ g { color: Green }
 
 Convierte valores analógicos a digitales de 10-bit
 
-| int    | Volts    |
-|--------|----------|
-| 0     | 0.0 - 0.0049|
-| 1     | 0.0049 - 0.0098|
-
 
 
 ---
+<div align="center">
+| int    | Volts    |
+|:-:|:-:|
+|0  | 0.0000 - 0.0049|
+|1  | 0.0049 -  0.0098|
+|2  | 0.0098 - 0.0146|
+|3  | 0.0146 - 0.0195|
+|1022  | 4.9902 - 4.9951|
+|1023  | 4.9951 - 5.0000|
 
-
+</div>
 
 ---
 
 
 ```cpp
-
 void setup() {
   Serial.begin(9600);
 }
 
 void loop() {
-  analogRead(); 
   Serial.println(analogRead(A1)); 
 }
 ```
