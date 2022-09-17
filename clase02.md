@@ -43,7 +43,7 @@ g { color: Green }
 
 ![bg right width:85% height:90%](https://i0.wp.com/blog.330ohms.com/wp-content/uploads/2020/06/Arduino_lm35_bb.png?resize=696%2C860&ssl=1)
 
-- Los Sensores digitales tienen salidas que se pueden conectar a microprocesadores (Arduino)
+- Los Sensores analógicos tienen salidas que se pueden conectar a microprocesadores (Arduino)
 
 - La analogía se hace con valores de voltage.
 
@@ -113,6 +113,31 @@ void loop() {
 > Armar un circuito que simule o imite el funcionamiento de una lampara de iluminación callejera.
 > - Cuando el sensor o LDR detecte falta de luz se active un led. 
 
+---
+
+![bg right w:90%](img/ldr_mas_led.png)
+
+```cpp
+byte LED = 2;
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(LED, OUTPUT);
+}
+
+void loop() {
+  uint16_t analog0;
+  analog0 = analogRead(A0);
+  Serial.println(analog0); 
+  if(analog0 > 550){
+    digitalWrite(LED, HIGH);
+  }
+  else{
+    digitalWrite(LED, LOW);
+  }
+  delay(500);
+}
+```
 ---
 
 # **Entradas Digitales**

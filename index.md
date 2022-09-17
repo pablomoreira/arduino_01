@@ -36,8 +36,8 @@ También es una excelente plataforma para)
 - Puerto serie
 - Lectura y Escritura del puerto serie.
 - Display  LCD (2x16)
-- Practica LCD LDR
-- Practica Teclados LCD
+- Practica LCD + LDR
+- Practica Teclados + LCD
 
 ## Clase 4 (Actuadores)
 - Relés mecánicos NO/NC
