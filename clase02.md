@@ -9,13 +9,14 @@ size: 16:9
 footer: "[Link](https://github.com/pablomoreira/arduino_01/blob/main/clase01.md)"
 
 
--->
 
+-->
 <style>
 r { color: Red }
 o { color: Orange }
 g { color: Green }
 </style> 
+
 
 # **Clase 2 (Entradas Analógicas/Digitales)**
 - Entradas Analógicas
@@ -56,7 +57,7 @@ g { color: Green }
 
 ![bg right ](img/arduino_pote.png)
 
-Convierte valores analógicos a digitales de 10-bit
+<r>Convierte</r> valores analógicos a digitales de 10-bit
 
 
 
