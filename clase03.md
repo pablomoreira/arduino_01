@@ -57,8 +57,7 @@ g { color: Green }
 #
 
 ```cpp
-# Transmitir y recibir datos por el puerto Serie 
-#
+// Transmitir y recibir datos por el puerto Serie 
 byte LED1 = 12;
 
 void setup() {
