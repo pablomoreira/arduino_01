@@ -166,5 +166,153 @@ void loop() {
 ---
 ## **Teclados Matriciales**
 <p align="center">
-  <img width=50% src=img/Teclado-Matricial-4x3.png>
+  <img width=50% src=img/4x3-Membrane-Keypad-Interface.jpg>
 </p>
+
+---
+
+## **Esquema 1**
+
+![bg right h:80%](img/4x3-1x1.png)
+
+*Abierto*
+| 2 | 6 |
+|:-:|:-:|
+|0 |1|
+|1 |1|
+
+*Cerrado*
+| 2 | 6 |
+|:-:|:-:|
+|0 |0|
+|1 |1|
+
+---
+
+```cpp
+byte F1 = 2;
+byte C1 = 6;
+void setup() {
+  Serial.begin(9600);
+  pinMode(F1, OUTPUT);
+  pinMode(C1, INPUT_PULLUP);
+  digitalWrite(F1, HIGH);
+  
+}
+void loop() {
+  
+  digitalWrite(F1, LOW);
+  Serial.println(digitalRead(C1));
+  digitalWrite(F1, HIGH);
+  delay(500);
+}
+
+```
+---
+![bg w:70%](img/4x3-4x1.png)
+
+---
+
+```cpp
+byte F1 = 2;
+byte F2 = 3;
+byte F3 = 4;
+byte F4 = 5;
+byte C1 = 6;
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(F1, OUTPUT);
+  pinMode(F2, OUTPUT);
+  pinMode(F3, OUTPUT);
+  pinMode(F4, OUTPUT);
+  pinMode(C1, INPUT_PULLUP);
+  digitalWrite(F1, HIGH);
+  digitalWrite(F2, HIGH);
+  digitalWrite(F3, HIGH);
+  digitalWrite(F4, HIGH);
+}
+
+void loop() {
+  
+  digitalWrite(F1, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F1 C1");
+  digitalWrite(F1, HIGH);
+  
+  digitalWrite(F2, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F2 C1");
+  digitalWrite(F2, HIGH);
+  
+  digitalWrite(F3, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F3 C1");
+  digitalWrite(F3, HIGH);
+    
+  digitalWrite(F4, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F4 C1");
+  digitalWrite(F4, HIGH);
+  
+  delay(120);
+}
+```
+---
+![bg w:70%](img/4x3-4x3.png)
+
+---
+```cpp
+byte F1 = 2;
+byte F2 = 3;
+byte F3 = 4;
+byte F4 = 5;
+
+byte C1 = 6;
+byte C2 = 7;
+byte C3 = 8;
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(9600);
+  pinMode(F1, OUTPUT);
+  pinMode(F2, OUTPUT);
+  pinMode(F3, OUTPUT);
+  pinMode(F4, OUTPUT);
+  pinMode(C1, INPUT_PULLUP);
+  pinMode(C2, INPUT_PULLUP);
+  pinMode(C3, INPUT_PULLUP);
+  
+  digitalWrite(F1, HIGH);
+  digitalWrite(F2, HIGH);
+  digitalWrite(F3, HIGH);
+  digitalWrite(F4, HIGH);
+
+}
+
+void loop() {
+  
+  digitalWrite(F1, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F1 C1");
+  if (digitalRead(C2) == LOW) Serial.println("F1 C2");
+  if (digitalRead(C3) == LOW) Serial.println("F1 C3");
+  digitalWrite(F1, HIGH);
+  
+  digitalWrite(F2, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F2 C1");
+  if (digitalRead(C2) == LOW) Serial.println("F2 C2");
+  if (digitalRead(C3) == LOW) Serial.println("F2 C3");
+  digitalWrite(F2, HIGH);
+  
+  digitalWrite(F3, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F3 C1");
+  if (digitalRead(C2) == LOW) Serial.println("F3 C2");
+  if (digitalRead(C3) == LOW) Serial.println("F3 C3");
+  digitalWrite(F3, HIGH);
+    
+  digitalWrite(F4, LOW);
+  if (digitalRead(C1) == LOW) Serial.println("F4 C1");
+  if (digitalRead(C2) == LOW) Serial.println("F4 C2");
+  if (digitalRead(C3) == LOW) Serial.println("F4 C3");
+  digitalWrite(F4, HIGH);
+  
+  delay(120);
+}
+
+```
