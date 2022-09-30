@@ -47,7 +47,7 @@ El relé es un dispositivo electromagnético. Funciona como un interruptor contr
 * Utilizar un relé es equivalente, en código, a activar o desactivar un LED.
 
 ---
-```Arduino
+```cpp
 byte RELE = 2;
 
 void setup() {
@@ -80,7 +80,7 @@ void loop() {
 
 ---
 
-```Arduino
+```cpp
 // Include the libraries we need
 #include <OneWire.h>
 #include <DallasTemperature.h>
